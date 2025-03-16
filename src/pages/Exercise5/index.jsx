@@ -1,13 +1,8 @@
 import { useState, useEffect } from "react";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 function Exercise5() {
-    const [title, setTitle] = useState("Trang chủ");
-
-    useEffect(() => {
-        document.title = title;
-    }, [title]);
-
-    // useDocumentTitle(title);
+    const [title, setTitle] = useDocumentTitle("Giới thiệu");
 
     return (
         <div>
