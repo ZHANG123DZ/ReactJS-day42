@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 function useLocalStorage(key, initialValue) {
     const nameStorage = JSON.parse(localStorage.getItem(key))
-    const [name, setName] = useState(nameStorage)
+    const [name, setName] = useState(nameStorage||initialValue)
     
     useEffect(() => {
         localStorage.setItem(key, JSON.stringify(name))
